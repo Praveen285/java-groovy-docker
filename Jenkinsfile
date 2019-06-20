@@ -19,7 +19,7 @@ node{
       }  
    
       stage('Publish Docker Image'){
-         withCredentials([string(credentialsId: 'dockerpwdpreveen', variable: 'dockerPWD')]) {
+         withCredentials([string(credentialsId: 'dockerpwdpraveen', variable: 'dockerPWD')]) {
               sh "docker login -u pravdock28 -p ${dockerPWD}"
          }
         sh "docker push ${dockerImageName}"
